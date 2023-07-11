@@ -17,11 +17,6 @@ blue_led_pin = Pin(3, Pin.OUT, Pin.PULL_DOWN)
 button1_pin = Pin(6, Pin.IN, Pin.PULL_UP)
 button2_pin = Pin(7, Pin.IN, Pin.PULL_UP)
 
-# Function to update LED states
-def update_leds(red, blue):
-    red_led_pin.value(red)
-    blue_led_pin.value(blue)
-
 # Function to Turn on Relay
 def motor_state(state):
     motor_pin.value(state)
@@ -43,14 +38,17 @@ while True:
     # Note in this example the button is pressed when button#_state is 0
     # Check button states and update LEDs accordingly
     if button1_state == 0 and button2_state == 1:  # Button 1 pressed
-        update_leds(0, 1)  # Red LED on, others off
+        red_led_pin.value(1)  # Red LED on, others off
     elif button1_state == 1 and button2_state == 0:  # Button 2 pressed
-        update_leds(1, 0)  # Blue LED on, others off
+        blue_led_pin.value(1)  # Blue LED on, others off
     elif button1_state == 1 and button2_state == 1:
         #update_leds(1, 1)   # Both Blue and Red lights on
+        red_led_pin.value(1)
+        blue_led_pin.value(1)
         motor_state(1)     # Motor On
     else:
-        update_leds(0, 0)  # All LEDs off
+        red_led_pin.value(0)
+        blue_led_pin.value(0)  # All LEDs off
         motor_state(0)     # Motor Off
         continue
     utime.sleep_ms(500)        
