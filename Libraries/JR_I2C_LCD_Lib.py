@@ -19,11 +19,28 @@ def display_scroll(string, row_no):
     utime.sleep_ms(rest_Time)
     lcd.clear()
 
+
+## lcd_menu_display(string1, string2) -> lcd output
+## Assess the length of the strings to be displayed in the 16x2 lcd, and 
+##  displays them scrolling or non-scrolling appropriately.
 def lcd_menu_display(Row1, Row2):
-    if len(Row1 > 16):
+    if (len(Row1) > 16 and len(Row2) > 16)
         display_scroll(Row1, 1)
-    else:
+        display_scroll(Row2, 2)
+    elif (len(Row1) <= 16 and len(Row2) > 16)
         lcd.move_to(0, 0)
         lcd.putstr(Row1)
+        display_scroll(Row2, 2)
+    elif (len(Row1) > 16 and len(Row2) <= 16)
+        display_scroll(Row1, 1)
+        lcd.move_to(2, 0)
+        lcd.putstr(Row2)
+    else (len(Row1) <= 16 and len(Row2) <= 16)
+        lcd.move_to(0, 0)
+        lcd.putstr(Row1)
+        lcd.move_to(2, 0)
+        lcd.putstr(Row2)
+
+
 
 display_scroll("Show me the money baby", 1)
