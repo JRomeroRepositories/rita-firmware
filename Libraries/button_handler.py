@@ -2,37 +2,46 @@ from machine import Pin
 import utime
 
 class ButtonHandler:
-    def __init__(self, pin_num):
-        self.button_pin = Pin(pin_num, Pin.IN, Pin.PULL_UP)
-        self.BTTN_PREV_STATE = 0
-        self.PRESS_START_TIME = 0
-        self.PRESS_T_ELAPSED = 0
-        self.PRESS_UP_DOWN = 'U'
+    def __init__(self, pin_1, pin_2):
+        self.button_pin_1 = Pin(pin_1, Pin.IN, Pin.PULL_UP)
+        self.button_pin_2 = Pin(pin_2, Pin.IN, Pin.PULL_UP)
 
-    def normalize_button(self):
-        Bval = self.button_pin.value()
-        if self.PRESS_UP_DOWN == 'U':
-            Bval = not Bval
-        return Bval
 
+    def _normalize_button(self, pin):
+        Bval = pin.value()
+        return not Bval
+    
     def handle_button(self):
-        Bstate = self.normalize_button()
-        if Bstate and not self.BTTN_PREV_STATE:
-            self.PRESS_START_TIME = utime.ticks_ms()
-            self.BTTN_PREV_STATE = True
-        elif Bstate and self.BTTN_PREV_STATE:
-            current_time = utime.ticks_ms()
-            self.PRESS_T_ELAPSED = current_time - self.PRESS_START_TIME
-            if self.PRESS_T_ELAPSED > 2000:
-                if self.PRESS_START_TIME != 0:
-                    self.PRESS_START_TIME = 0
-                    return 2
-        elif not Bstate and self.BTTN_PREV_STATE:
-            self.BTTN_PREV_STATE = False
-            if self.PRESS_START_TIME != 0:
-                return 1
-            else:
-                return 0
+        Bstate_1 = self._normalize_button(self.button_pin_1)
+        Bstate_2 = self._normalize_button(self.button_pin_2)
+        if Bstate_1 and not Bstate_2:
+            return 1
+        elif Bstate_2 and not Bstate_1:
+            return 2
+        elif Bstate_1 and Bstate_2:
+            return 3
+        else:
+            return 0
+        
+
+    # def handle_button(self):
+    #     Bstate = self.normalize_button()
+    #     if Bstate and not self.BTTN_PREV_STATE:
+    #         self.PRESS_START_TIME = utime.ticks_ms()
+    #         self.BTTN_PREV_STATE = True
+    #     elif Bstate and self.BTTN_PREV_STATE:
+    #         current_time = utime.ticks_ms()
+    #         self.PRESS_T_ELAPSED = current_time - self.PRESS_START_TIME
+    #         if self.PRESS_T_ELAPSED > 2000:
+    #             if self.PRESS_START_TIME != 0:
+    #                 self.PRESS_START_TIME = 0
+    #                 return 2
+    #     elif not Bstate and self.BTTN_PREV_STATE:
+    #         self.BTTN_PREV_STATE = False
+    #         if self.PRESS_START_TIME != 0:
+    #             return 1
+    #         else:
+    #             return 0
 
 # Usage example:
 # button_handler = ButtonHandler(6)  # Create an instance with the button pin number
@@ -47,6 +56,11 @@ class ButtonHandler:
 
 
 
+buttons = ButtonHandler(6, 7)
+print("Ready, Set, Go!")
+while True:
+    response = buttons.handle_button()
+    print(response)
 
 
 
