@@ -9,5 +9,10 @@
         "~/.micropico-stubs/included"
     ],
     "picowgo.syncFolder": "",
-    "picowgo.openOnStart": true
+    "picowgo.openOnStart": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingModuleSource": "none"
+    },
+    "micropico.syncFolder": "",
+    "micropico.openOnStart": true
 }
