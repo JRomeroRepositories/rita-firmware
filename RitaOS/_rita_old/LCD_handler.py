@@ -1,8 +1,8 @@
 ## A class that handles diplay output to the LCD screen
 
 from machine import Pin, I2C
-from lcd_api import LcdApi
-from pico_i2c_lcd import I2cLcd
+from lcd_driver.lcd_api import LcdApi
+from lcd_driver.pico_i2c_lcd import I2cLcd
 
 
 import utime

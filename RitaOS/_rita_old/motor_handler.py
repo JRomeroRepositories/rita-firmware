@@ -23,3 +23,14 @@ class MotorHandler:
         self.motor.value(1)
         utime.sleep(t)
         self.motor.value(0)
+
+
+# Example usage
+motor = MotorHandler(15)
+motor.motor_on()
+utime.sleep(2)
+motor.motor_off()
+
+
+
+
