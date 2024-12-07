@@ -61,8 +61,13 @@ class ManageIO:
 #    is only sent when the button is released. This will allow for the handling of multiple button presses and hold times.   
 class ButtonDriver:
     def __init__(self, pin_1, pin_2):
+        ## Initialize the button pins
         self.button_pin_1 = machine.Pin(pin_1, machine.Pin.IN, machine.Pin.PULL_UP)
         self.button_pin_2 = machine.Pin(pin_2, machine.Pin.IN, machine.Pin.PULL_UP)
+
+        ## Initialize the button state variables
+        self.button_1_prev_state = None
+        self.button_2_prev_state = None
 
     ## button is normalized to 1 when pressed and 0 when unpressed
     def _normalize_button(self, pin):
@@ -70,16 +75,43 @@ class ButtonDriver:
         return not Bval
     
     def handle_button(self):
-        Bstate_1 = self._normalize_button(self.button_pin_1)
-        Bstate_2 = self._normalize_button(self.button_pin_2)
-        if ((Bstate_1 == True) and (Bstate_2 == True)):
-            return 3 ## Both buttons pressed
-        elif (Bstate_1 == True):
-            return 1 ## Select Action
-        elif (Bstate_2 == True):
-            return 2 ## Increment Action
-        else:
-            return 0 ## No action
+        button_1_state = self._normalize_button(self.button_pin_1)
+        button_2_state = self._normalize_button(self.button_pin_2)
+
+        ## Initialize the button state variables if they are None
+        if (self.button_1_prev_state == None):
+            self.button_1_prev_state = button_1_state
+        if (self.button_2_prev_state == None):
+            self.button_2_prev_state = button_2_state
+
+        ## Check if the button state has changed, then only return on the release of the button
+        ## Button 1
+        if (button_1_state != self.button_1_prev_state):
+            if ((self.button_1_prev_state == 1) and (button_1_state == 0)):
+                self.button_1_prev_state = button_1_state
+                return 1
+            else:
+                self.button_1_prev_state = button_1_state
+        ## Button 2
+        if (button_2_state != self.button_2_prev_state):
+            if ((self.button_2_prev_state == 1) and (button_2_state == 0)):
+                self.button_2_prev_state = button_2_state
+                return 2
+            else:
+                self.button_2_prev_state = button_2_state
+        ## If no button is pressed, return 0
+        return 0
+
+
+
+        # if ((Bstate_1 == True) and (Bstate_2 == True)):
+        #     return 3 ## Both buttons pressed
+        # elif (Bstate_1 == True):
+        #     return 1 ## Select Action
+        # elif (Bstate_2 == True):
+        #     return 2 ## Increment Action
+        # else:
+        #     return 0 ## No action
 
 
 ## Water Sensor Driver Class

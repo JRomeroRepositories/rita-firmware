@@ -5,9 +5,8 @@ show_menu()
 navigate(direction)
 select()"""
 
-## 
+
 class MenuOS:
     def __init__(self):
-
+        pass
     
-

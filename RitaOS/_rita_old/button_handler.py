@@ -10,6 +10,9 @@ class ButtonHandler:
         self.button_pin_1 = Pin(pin_1, Pin.IN, Pin.PULL_UP)
         self.button_pin_2 = Pin(pin_2, Pin.IN, Pin.PULL_UP)
 
+        ## Rita button pins
+        self.BUTTON_1_PIN = 6
+        self.BUTTON_2_PIN = 7
 
     def _normalize_button(self, pin):
         Bval = pin.value()
