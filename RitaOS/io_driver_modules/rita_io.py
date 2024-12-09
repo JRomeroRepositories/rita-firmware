@@ -123,9 +123,27 @@ class WaterSensorDriver:
 
 ## Water Pump Motor Driver Class
 ## TODO: Impliment motor driver class
+## NOTE: In Rita V1, motor pin is wired to 15
 class PumpMotorDriver:
     def __init__(self, pin):
         self.MOTOR_PIN = machine.Pin(pin, machine.Pin.OUT)
+
+    def motor_on(self):
+        self.MOTOR_PIN.value(1)
+    
+    def motor_off(self):
+        self.MOTOR_PIN.value(0)
+
+    def motor_toggle(self):
+        if (self.MOTOR_PIN.value() == 1):
+            self.MOTOR_PIN.value(0)
+        else:
+            self.MOTOR_PIN.value(1)
+        
+    def motor_duration(self, t): ## Stays on for t seconds
+        self.MOTOR_PIN.value(1)
+        utime.sleep(t)
+        self.MOTOR_PIN.value(0)
 
 
 ## LCD Driver Class
@@ -141,13 +159,53 @@ class LcdDriver:
 
 
 ## LED Driver Class
-## TODO: Imliment LED Driver class - objective to have multiple indication options for each LED
 ##  Considerations:
 ##      - steady signal
-##      - fast blink
-##      - Slow blink (for error indication)
-class LedDriver:
-    def __init__(self, pin_1, pin_2):
-        pass
+##      - fast blink TODO
+##      - Slow blink (for error indication) TODO
 
+## NOTE: In Rita V1, LED1 is wired to pin 8 and LED2 is wired to pin 9
+class LedDriver:
+    def __init__(self, red_pin, blue_pin):
+        self.red_led = machine.Pin(red_pin, machine.Pin.OUT, machine.Pin.PULL_DOWN)
+        self.blue_led = machine.Pin(blue_pin, machine.Pin.OUT, machine.Pin.PULL_DOWN)
+        
+    def red_led_on(self):
+        self.red_led.value(1)
+        
+    def red_led_off(self):
+        self.red_led.value(0)
+        
+    def blue_led_on(self):
+        self.blue_led.value(1)
+        
+    def blue_led_off(self):
+        self.blue_led.value(0)
+        
+    def red_led_toggle(self):
+        if (self.red_led.value() == 1):
+            self.red_led.value(0)
+        else:
+            self.red_led.value(1)
+    
+    def blue_led_toggle(self):
+        if (self.blue_led.value() == 1):
+            self.blue_led.value(0)
+        else:
+            self.blue_led.value(1)
+        
+    def both_leds_off(self):
+        self.red_led.value(0)
+        self.blue_led.value(0)
+            
+    def red_led_timed(self, t): ## Stays on for t seconds
+        self.red_led.value(1)
+        utime.sleep(t)
+        self.red_led.value(0)
+        
+    def blue_led_timed(self, t):
+        self.blue_led.value(1)
+        utime.sleep(t)
+        self.blue_led.value(0)
+        
 
