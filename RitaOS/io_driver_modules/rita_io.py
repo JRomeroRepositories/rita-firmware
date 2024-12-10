@@ -118,7 +118,7 @@ class ButtonDriver:
 ## TODO: Impliment
 class WaterSensorDriver:
     def __init__(self, pin):
-        self.SENSOR_PIN = machine.Pin(pin, machine.Pin.IN, machine.Pin.PULL_DOWN)
+        self.SENSOR_PIN = machine.Pin(pin, machine.Pin.IN)
 
 
 ## Water Pump Motor Driver Class
@@ -126,7 +126,7 @@ class WaterSensorDriver:
 ## NOTE: In Rita V1, motor pin is wired to 15
 class PumpMotorDriver:
     def __init__(self, pin):
-        self.MOTOR_PIN = machine.Pin(pin, machine.Pin.OUT)
+        self.MOTOR_PIN = machine.Pin(pin, machine.Pin.OUT, machine.Pin.PULL_DOWN)
 
     def motor_on(self):
         self.MOTOR_PIN.value(1)
@@ -161,51 +161,53 @@ class LcdDriver:
 ## LED Driver Class
 ##  Considerations:
 ##      - steady signal
-##      - fast blink TODO
-##      - Slow blink (for error indication) TODO
-
-## NOTE: In Rita V1, LED1 is wired to pin 8 and LED2 is wired to pin 9
+##      - fast blink
+##      - Slow blink (for error indication)
+## NOTE: In Rita V1, Blue is wired to pin 2 and Red is wired to pin 3
+## Blue and Red LEDs must be initialized seperately as seperate objects
+## TODO: Reimplement the LED driver class using async methods
 class LedDriver:
-    def __init__(self, red_pin, blue_pin):
-        self.red_led = machine.Pin(red_pin, machine.Pin.OUT, machine.Pin.PULL_DOWN)
-        self.blue_led = machine.Pin(blue_pin, machine.Pin.OUT, machine.Pin.PULL_DOWN)
-        
-    def red_led_on(self):
-        self.red_led.value(1)
-        
-    def red_led_off(self):
-        self.red_led.value(0)
-        
-    def blue_led_on(self):
-        self.blue_led.value(1)
-        
-    def blue_led_off(self):
-        self.blue_led.value(0)
-        
-    def red_led_toggle(self):
-        if (self.red_led.value() == 1):
-            self.red_led.value(0)
-        else:
-            self.red_led.value(1)
+    def __init__(self, led_pin):
+        self.led_state = 0 # 0 is off, 1 is on, 2 is blinking (fast), 3 is blinking (slow)
+        self.led_running = False
+        self.led = machine.Pin(led_pin, machine.Pin.OUT)
+        print("LedDriver initialized on pin: ", led_pin)
+
+    ## led_run is a method that runs the LED in the current state
+    ## NOTE: This method is blocking, so it should be run in a seperate thread
+    def led_run(self):
+        self.led_running = True
+        print("Running LED: ", self.led)
+        print("LED State: ", self.led_state)
+        print("LED Running: ", self.led_running)
+        while self.led_running == True:
+            if (self.led_state == 1):
+                self.led.value(1)
+            elif (self.led_state == 0):
+                self.led.value(0)
+            elif (self.led_state == 2):
+                self._blink_led(0.5)
+            elif (self.led_state == 3):
+                self._blink_led(1.25)
+
+    def led_update_state(self, state):
+        self.led_state = state
+
+    def led_stop(self):
+        self.led_running = False
+        self.led_state = 0
+        self.led.value(0)
     
-    def blue_led_toggle(self):
-        if (self.blue_led.value() == 1):
-            self.blue_led.value(0)
-        else:
-            self.blue_led.value(1)
-        
-    def both_leds_off(self):
-        self.red_led.value(0)
-        self.blue_led.value(0)
             
-    def red_led_timed(self, t): ## Stays on for t seconds
-        self.red_led.value(1)
-        utime.sleep(t)
-        self.red_led.value(0)
-        
-    def blue_led_timed(self, t):
-        self.blue_led.value(1)
-        utime.sleep(t)
-        self.blue_led.value(0)
+    def _blink_led(self, time_interval):
+                self._led_toggle()
+                utime.sleep(time_interval)
+    
+    def _led_toggle(self):
+        if (self.led.value() == 1): ## Note that it checks the actual state of the LED pin, not the stored state
+            self.led.value(0)
+        else:
+            self.led.value(1)
+
         
 
