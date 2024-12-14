@@ -118,7 +118,12 @@ class ButtonDriver:
 ## TODO: Impliment
 class WaterSensorDriver:
     def __init__(self, pin):
-        self.SENSOR_PIN = machine.Pin(pin, machine.Pin.IN)
+        self.SENSOR_PIN = machine.Pin(pin, machine.Pin.IN) ## Water Sensor Pin is Pin 34 or (ADC2)
+
+    def read_sensor(self):
+        raw_val = machine.ADC(2).read_u16()
+        return raw_val
+        
 
 
 ## Water Pump Motor Driver Class
