@@ -18,13 +18,14 @@ from io_driver_modules.rita_io import WaterSensorDriver
 # led.value(0)
 
 
-print("LED on pin GP2 (GPIO4) is turned ON.")
 
+## Test the Water Sensor Driver
 val = 0
-adc2 = machine.ADC(2)
+adc2 = 28
 
 while True:
     print("Reading sensor value")
     sensor = WaterSensorDriver(adc2)
     val = sensor.read_sensor()
     print("Sensor value: ", val)
+    time.sleep(1)

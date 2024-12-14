@@ -117,12 +117,36 @@ class ButtonDriver:
 ## Water Sensor Driver Class
 ## TODO: Impliment
 class WaterSensorDriver:
+    ## Normalization constants to between 1 and 100
+    TARGET_MIN = 1
+    TARGET_MAX = 100
+
+    ## Raw ADC constants
+    RAW_MIN = 0
+    RAW_MAX = 65535
+
+
     def __init__(self, pin):
         self.SENSOR_PIN = machine.Pin(pin, machine.Pin.IN) ## Water Sensor Pin is Pin 34 or (ADC2)
+        self.moving_average_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    ## Function to normalize ADC value
+    def _normalize_adc_value(self, raw_value):
+        return self.TARGET_MIN + (raw_value / self.RAW_MAX) * 99
 
     def read_sensor(self):
-        raw_val = machine.ADC(2).read_u16()
-        return raw_val
+        raw_val = machine.ADC(self.SENSOR_PIN).read_u16()
+        normalized_val = int(self._normalize_adc_value(raw_val)) # Normalize the raw value to between 1 and 100
+
+        ## First reading, moving average list is empty
+        if sum(self.moving_average_list) == 0:
+            self.moving_average_list = [normalized_val] * 10
+        else:
+            self.moving_average_list.pop(0) # Remove the first element
+            self.moving_average_list.append(normalized_val) # Append the new value to the end of the list
+
+        ## Return the average of the moving average list
+        return sum(self.moving_average_list) / 10
         
 
 
