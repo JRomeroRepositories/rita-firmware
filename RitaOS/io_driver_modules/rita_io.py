@@ -3,6 +3,7 @@ import machine
 from machine import I2C
 from io_driver_modules.lcd_api import LcdApi
 from io_driver_modules.pico_i2c_lcd import I2cLcd
+import asyncio
 
 ## io manager class
 
@@ -203,21 +204,22 @@ class LedDriver:
         print("LedDriver initialized on pin: ", led_pin)
 
     ## led_run is a method that runs the LED in the current state
-    ## NOTE: This method is blocking, so it should be run in a seperate thread
-    def led_run(self):
+    async def led_run(self):
         self.led_running = True
         print("Running LED: ", self.led)
         print("LED State: ", self.led_state)
         print("LED Running: ", self.led_running)
-        while self.led_running == True:
-            if (self.led_state == 1):
-                self.led.value(1)
-            elif (self.led_state == 0):
-                self.led.value(0)
-            elif (self.led_state == 2):
-                self._blink_led(0.5)
-            elif (self.led_state == 3):
-                self._blink_led(1.25)
+        while self.led_running:
+            if self.led_state == 1:
+                self.led.value(1)  # LED ON
+            elif self.led_state == 0:
+                self.led.value(0)  # LED OFF
+            elif self.led_state == 2:
+                await self._blink_led(0.5)  # Fast blink
+            elif self.led_state == 3:
+                await self._blink_led(1.25)  # Slow blink
+                
+            await asyncio.sleep(0.1)  # Prevent tight looping, yield to other tasks
 
     def led_update_state(self, state):
         self.led_state = state
@@ -228,9 +230,12 @@ class LedDriver:
         self.led.value(0)
     
             
-    def _blink_led(self, time_interval):
-                self._led_toggle()
-                utime.sleep(time_interval)
+    async def _blink_led(self, time_interval):
+        """Blink the LED with the given interval (seconds)."""
+        self.led.value(1)  # LED ON
+        await asyncio.sleep(time_interval)
+        self.led.value(0)  # LED OFF
+        await asyncio.sleep(time_interval)
     
     def _led_toggle(self):
         if (self.led.value() == 1): ## Note that it checks the actual state of the LED pin, not the stored state
