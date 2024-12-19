@@ -88,8 +88,19 @@ class ButtonDriver:
         return 0
 
 
-## Water Sensor Driver Class - The water sensor is a capacitive sensor but returns a value normalized
-## between 1 and 100. The sensor is wired to pin 34 (ADC2)
+
+        # if ((Bstate_1 == True) and (Bstate_2 == True)):
+        #     return 3 ## Both buttons pressed
+        # elif (Bstate_1 == True):
+        #     return 1 ## Select Action
+        # elif (Bstate_2 == True):
+        #     return 2 ## Increment Action
+        # else:
+        #     return 0 ## No action
+
+
+## Water Sensor Driver Class
+## TODO: Impliment
 class WaterSensorDriver:
     ## Normalization constants to between 1 and 100
     TARGET_MIN = 1
@@ -190,7 +201,7 @@ class LedDriver:
                 await self._blink_led(0.5)  # Fast blink
             elif self.led_state == 3:
                 await self._blink_led(1.25)  # Slow blink
-                
+
             await asyncio.sleep(0.1)  # Prevent tight looping, yield to other tasks
 
     def led_update_state(self, state):
