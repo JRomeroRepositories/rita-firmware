@@ -7,25 +7,41 @@ sys.path.append('/ai_modules')
 
 import machine
 import time
-from io_driver_modules.rita_io import WaterSensorDriver
-
-# # Initialize the LED pin
-# led = machine.Pin(3, machine.Pin.OUT)
-
-# # Turn on the LED
-# led.value(1)
-# time.sleep(3)
-# led.value(0)
+import io_driver_modules.rita_io as io
 
 
 
-## Test the Water Sensor Driver
-val = 0
-adc2 = 28
+class RitaTest:
 
-while True:
-    print("Reading sensor value")
-    sensor = WaterSensorDriver(adc2)
-    val = sensor.read_sensor()
-    print("Sensor value: ", val)
-    time.sleep(1)
+    def __init__(self):
+        print("RitaTest initialized")
+        self.buttons = io.ButtonDriver(6, 7)
+        self.blue_led = io.LedDriver(2) ## Blue LED is wired to pin 8
+        self.red_led = io.LedDriver(3) ## Red LED is wired to pin 9
+        # self.water_sensor = io.WaterSensorDriver(28)
+
+    def test_io(self):
+
+
+
+        ## Main testing loop. While active, allows for testing of the IO drivers on hardware.
+        while True:
+
+            
+
+
+
+# ## Test the Water Sensor Driver
+# val = 0
+# adc2 = 28
+
+# while True:
+#     print("Reading sensor value")
+#     sensor = WaterSensorDriver(adc2)
+#     val = sensor.read_sensor()
+#     print("Sensor value: ", val)
+#     time.sleep(1)
+
+## Run the test
+test_instance = RitaTest()
+test_instance.test_io()
