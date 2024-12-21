@@ -3,7 +3,7 @@ import machine
 from machine import I2C
 from io_driver_modules.lcd_api import LcdApi
 from io_driver_modules.pico_i2c_lcd import I2cLcd
-import asyncio
+import uasyncio
 
 ## io manager class
 
@@ -71,7 +71,8 @@ class ButtonDriver:
         Bval = pin.value()
         return not Bval
     
-    def handle_button(self):
+    ## handle_button is a method that checks the state of the button and returns 1 when the button is released
+    async def _handle_button(self):
         button_state = self._normalize_button(self.button_pin)
 
         ## Initialize the button state variables if they are None
@@ -86,17 +87,14 @@ class ButtonDriver:
             else:
                 self.button_prev_state = button_state
         return 0
+    
+    ## button_run is a method that runs the button handler in an async loop
+    async def button_run(self):
+        while True:
+            response = self._handle_button()
+            await uasyncio.sleep(0.1) # Prevent tight looping, yield to other tasks
+            return response
 
-
-
-        # if ((Bstate_1 == True) and (Bstate_2 == True)):
-        #     return 3 ## Both buttons pressed
-        # elif (Bstate_1 == True):
-        #     return 1 ## Select Action
-        # elif (Bstate_2 == True):
-        #     return 2 ## Increment Action
-        # else:
-        #     return 0 ## No action
 
 
 ## Water Sensor Driver Class
@@ -202,7 +200,7 @@ class LedDriver:
             elif self.led_state == 3:
                 await self._blink_led(1.25)  # Slow blink
 
-            await asyncio.sleep(0.1)  # Prevent tight looping, yield to other tasks
+            await uasyncio.sleep(0.1)  # Prevent tight looping, yield to other tasks
 
     def led_update_state(self, state):
         self.led_state = state
@@ -216,9 +214,9 @@ class LedDriver:
     async def _blink_led(self, time_interval):
         """Blink the LED with the given interval (seconds)."""
         self.led.value(1)  # LED ON
-        await asyncio.sleep(time_interval)
+        await uasyncio.sleep(time_interval)
         self.led.value(0)  # LED OFF
-        await asyncio.sleep(time_interval)
+        await uasyncio.sleep(time_interval)
     
     def _led_toggle(self):
         if (self.led.value() == 1): ## Note that it checks the actual state of the LED pin, not the stored state
