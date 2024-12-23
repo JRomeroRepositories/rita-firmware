@@ -55,7 +55,8 @@ class ManageIO:
     #         return 2 ## Increment Action
     #     else:
     #         return 0 ## No action
-        
+
+## -----------------------------------------------------------------------------------------------
         
 ##  Button Driver class - a signal is only sent when the button is released. 
 class ButtonDriver:
@@ -95,10 +96,10 @@ class ButtonDriver:
             await uasyncio.sleep(0.1) # Prevent tight looping, yield to other tasks
             return response
 
-
+## -----------------------------------------------------------------------------------------------
 
 ## Water Sensor Driver Class
-## TODO: Impliment
+## TODO: Impliment synchronous reading of the water sensor
 class WaterSensorDriver:
     ## Normalization constants to between 1 and 100
     TARGET_MIN = 1
@@ -131,10 +132,11 @@ class WaterSensorDriver:
         ## Return the average of the moving average list
         return sum(self.moving_average_list) / 10
         
-
+## -----------------------------------------------------------------------------------------------
 
 ## Water Pump Motor Driver Class
 ## In Rita V1, motor pin is wired to 15
+## TODO: Impliment motor duration method with async functionality
 class PumpMotorDriver:
     def __init__(self, pin):
         self.MOTOR_PIN = machine.Pin(pin, machine.Pin.OUT, machine.Pin.PULL_DOWN)
@@ -156,7 +158,7 @@ class PumpMotorDriver:
         utime.sleep(t)
         self.MOTOR_PIN.value(0)
 
-
+## -----------------------------------------------------------------------------------------------
 
 ## LCD Driver Class
 ## TODO: Impliment LCD Driver class - objective is to set up functions that facilitate menu functionality.
@@ -167,25 +169,119 @@ class PumpMotorDriver:
 ##      - Logo and/or custom character functionality (for some style)
 class LcdDriver:
     def __init__(self, addr, num_rows, num_cols):
+        self.num_rows = num_rows
+        self.num_cols = num_cols
         self.i2c = I2C(0, sda=machine.Pin(0), scl=machine.Pin(1), freq=400000)
         self.lcd = I2cLcd(self.i2c, addr, num_rows, num_cols)
         self.lcd.clear()
         self.lcd.move_to(0, 0) # column, row
-        self.lcd.putstr("RitaOS V1.0")
+        self.lcd.putstr("RitaOS")
         self.lcd.move_to(0, 1)  # column, row
+        self.lcd.putstr("Initializing...")
         utime.sleep(2)
         self.lcd.clear()
+        self.lcd.hide_cursor()
+
+    ## --- Async methods ---
+
+    ## lcd_bl_wake is a method that wakes the backlight for a given time (t)
+    async def lcd_bl_wake(self, t):
+        self.lcd_backlight_on()
+        await uasyncio.sleep(t)
+        self.lcd_backlight_off()
+
+
+    ## list_view_run is a method that runs the list view in an async loop
+    ## TODO: Impliment list_view_run method so that incrementing the selected item index is possible
+    # async def list_view_run(self, list_items, selected_item_index):
+    #     self.lcd.clear()
+    #     print("at function call selected item index: ", selected_item_index)
+    #     while True:
+    #         self.list_view(list_items, selected_item_index)
+    #         print("selected item index check: ", selected_item_index)
+    #         await uasyncio.sleep(1)
+
+
+    ## lcd_stat_view is a method that displays statistics on the LCD
+    ## The statistics are displayed in the following format:
+    ##      - Line 1: "Stat_Name1:Stat_Value1||Stat_Name2:Stat_Value2"
+    ##      - Line 2: "Stat_Name3:Stat_Value3||Stat_Name4:Stat_Value4"
+    ## Where stat name is less than 3 characters and stat value is less than 3 characters
+    ## Assumes 2x16 LCD
+    ## TODO: Test lcd_stat_view method
+    async def lcd_stat_view_run(self, stat_dict_list):
+        stat_dict_list_strings = []
+        assert len(stat_dict_list) == 4, "Stat dict list must have 4 dictionaries"
+        for stat_name, stat in stat_dict_list:
+            assert stat_name <= 3, "Stat name must be less than 3 characters"
+            assert type(stat) == float or type(stat) == int, "Stat value must be a float or an integer"
+            ## Convert the stat value to a string of length 3
+            stat_str = str(stat)
+            if len(stat_str) == 2:
+                stat_str = "0" + stat_str
+            elif len(stat_str) == 1:
+                stat_str = "00" + stat_str
+            elif len(stat_str) > 3:
+                stat_str = stat_str[:3]
+            ## Append the stat name and string converted value to the list
+            stat_dict_list_strings.append({stat_name : stat_str}) 
+
+        while True:
+            self.lcd_clear()
+            self._lcd_display(  stat_dict_list_strings[0].keys()[0] + ":" + stat_dict_list_strings[0].values()[0] + "||" + stat_dict_list_strings[1].keys()[0] + ":" + stat_dict_list_strings[1].values()[0],
+                                stat_dict_list_strings[2].keys()[0] + ":" + stat_dict_list_strings[2].values()[0] + "||" + stat_dict_list_strings[3].keys()[0] + ":" + stat_dict_list_strings[3].values()[0])
+            await uasyncio.sleep(0.5)
+
+
+    ## --- Sync methods ---
+
+    ## lcd_display is a method that displays two strings on the LCD
+    ## The strings are displayed on two seperate lines
+    ## Max length for the strings is num_cols
+    def _lcd_display(self, line1, line2):
+        assert len(line1) <= self.num_cols, "Line 1 is too long"
+        assert len(line2) <= self.num_cols, "Line 2 is too long"
+        self.lcd.clear()
+        self.lcd.move_to(0, 0)
+        self.lcd.putstr(line1)
+        self.lcd.move_to(0, 1)
+        self.lcd.putstr(line2)
+
+    ## list_view() displays a list of strings, with the selected item in the top row and next item in the bottom row
+    ## At the end of the list, the selected item (last item) is displayed in the top row and the first item is displayed in the bottom row
+    def list_view(self, list_items, selected_item_index):
+        assert selected_item_index < len(list_items), "Selected item index is out of range"
+        if selected_item_index == len(list_items) - 1:
+            self._lcd_display(list_items[selected_item_index], list_items[0])
+            self.lcd.move_to(15, 0)
+            self.lcd.putstr("<")
+        else:
+            self._lcd_display(list_items[selected_item_index], list_items[selected_item_index + 1])
+            self.lcd.move_to(15, 0)
+            self.lcd.putstr("<")
+
+    ## lcd_clear is a method that clears the LCD display
+    def lcd_clear(self):
+        self.lcd.clear()
+
+    ## lcd_backlight_on is a method that turns the LCD backlight on
+    def lcd_backlight_on(self):
+        self.lcd.backlight_on()
+    
+    ## lcd_backlight_off is a method that turns the LCD backlight off
+    def lcd_backlight_off(self):
+        self.lcd.backlight_off()
 
 
 
-
+## -----------------------------------------------------------------------------------------------
 
 ## LED Driver Class
 ##  Considerations:
 ##      - steady signal
 ##      - fast blink
 ##      - Slow blink (for error indication)
-## NOTE: In Rita V1, Blue is wired to pin 2 and Red is wired to pin 3
+## NOTE: In Rita V1, Blue is wired to pin 8 (GPIO2) and Red is wired to pin 9 (GPIO3)
 ## Blue and Red LEDs must be initialized seperately as seperate objects
 class LedDriver:
     def __init__(self, led_pin):
@@ -241,5 +337,6 @@ class LedDriver:
         else:
             self.led.value(1)
 
-        
+## -----------------------------------------------------------------------------------------------
+
 
