@@ -157,6 +157,7 @@ class PumpMotorDriver:
         self.MOTOR_PIN.value(0)
 
 
+
 ## LCD Driver Class
 ## TODO: Impliment LCD Driver class - objective is to set up functions that facilitate menu functionality.
 ##  Below are some considerations for implimentation:
@@ -166,7 +167,17 @@ class PumpMotorDriver:
 ##      - Logo and/or custom character functionality (for some style)
 class LcdDriver:
     def __init__(self, addr, num_rows, num_cols):
-        pass
+        self.i2c = I2C(0, sda=machine.Pin(0), scl=machine.Pin(1), freq=400000)
+        self.lcd = I2cLcd(self.i2c, addr, num_rows, num_cols)
+        self.lcd.clear()
+        self.lcd.move_to(0, 0) # column, row
+        self.lcd.putstr("RitaOS V1.0")
+        self.lcd.move_to(0, 1)  # column, row
+        utime.sleep(2)
+        self.lcd.clear()
+
+
+
 
 
 ## LED Driver Class
@@ -176,7 +187,6 @@ class LcdDriver:
 ##      - Slow blink (for error indication)
 ## NOTE: In Rita V1, Blue is wired to pin 2 and Red is wired to pin 3
 ## Blue and Red LEDs must be initialized seperately as seperate objects
-## TODO: Reimplement the LED driver class using async methods
 class LedDriver:
     def __init__(self, led_pin):
         self.led_state = 0 # 0 is off, 1 is on, 2 is blinking (fast), 3 is blinking (slow)
@@ -192,25 +202,31 @@ class LedDriver:
         print("LED Running: ", self.led_running)
         while self.led_running:
             if self.led_state == 1:
-                self.led.value(1)  # LED ON
+                self.led.value(1)  # LED steady ON
+                await uasyncio.sleep(0.1)  # Prevent tight looping, yield to other tasks
             elif self.led_state == 0:
-                self.led.value(0)  # LED OFF
+                self.led.value(0)  # LED steady OFF
+                await uasyncio.sleep(0.1)  # Prevent tight looping, yield to other tasks
             elif self.led_state == 2:
                 await self._blink_led(0.5)  # Fast blink
             elif self.led_state == 3:
                 await self._blink_led(1.25)  # Slow blink
 
-            await uasyncio.sleep(0.1)  # Prevent tight looping, yield to other tasks
 
+    ## led_update_state is a method that updates the state of the LED
+    ## The state can be 0 (off), 1 (on), 2 (fast blink), or 3 (slow blink)
     def led_update_state(self, state):
         self.led_state = state
 
+    ## led_stop is a method that stops the LED from running completely
+    ## Only call this method when the LED is no longer needed (ie. when the device is shutting down)
     def led_stop(self):
         self.led_running = False
         self.led_state = 0
         self.led.value(0)
     
-            
+    ## _blink_led is a private method that blinks the LED with the given interval (seconds)
+    ## This method is called by the led_run method
     async def _blink_led(self, time_interval):
         """Blink the LED with the given interval (seconds)."""
         self.led.value(1)  # LED ON
@@ -218,6 +234,7 @@ class LedDriver:
         self.led.value(0)  # LED OFF
         await uasyncio.sleep(time_interval)
     
+    ## _led_toggle is a private method that toggles the LED state
     def _led_toggle(self):
         if (self.led.value() == 1): ## Note that it checks the actual state of the LED pin, not the stored state
             self.led.value(0)
