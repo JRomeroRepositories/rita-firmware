@@ -5,13 +5,17 @@ from io_driver_modules.lcd_api import LcdApi
 from io_driver_modules.pico_i2c_lcd import I2cLcd
 import uasyncio
 
-## io manager class
+ 
 
-## button driver
-## water sensor driver
-## lcd driver
-## LED driver
-## motor/pump driver
+## rita_io.py Overview
+## The rita_io.py module contains the following classes:
+## - ManageIO 
+## - ButtonDriver 
+## - WaterSensorDriver
+## - PumpMotorDriver
+## - LcdDriver
+## - LedDriver
+
 
 
 
@@ -20,6 +24,9 @@ class ManageIO:
     A class that handles the IO of the rita device. That is, the class manages
     the device's inputs (buttons and water sensor) and outputs (motor, LEDs, and LCD).
     """
+
+
+
     # ## NOTE the io manager initializes all of the seperate io driver classes and stores them as attributes of the class
     # def __init__(self, button1_pin, button2_pin, water_sensor_pin, lcd_addr, lcd_rows, lcd_cols, LED1_pin, LED2_pin):
     #     """
@@ -41,20 +48,6 @@ class ManageIO:
     #     self.LED1 = machine.Pin(LED1_pin, machine.Pin.OUT)
     #     self.LED2 = machine.Pin(LED2_pin, machine.Pin.OUT)
 
-    # def button_check(self):
-    #     """
-    #     Checks the state of the buttons. Returns 1 if button1 is pressed, 2 if button2 is pressed, 3 if both are pressed, and 0 if none are pressed.
-    #     """
-    #     Bstate_1 = not self.button1.value()
-    #     Bstate_2 = not self.button2.value()
-    #     if ((Bstate_1 == True) and (Bstate_2 == True)):
-    #         return 3 ## Both buttons pressed
-    #     elif (Bstate_1 == True):
-    #         return 1 ## Select Action
-    #     elif (Bstate_2 == True):
-    #         return 2 ## Increment Action
-    #     else:
-    #         return 0 ## No action
 
 ## -----------------------------------------------------------------------------------------------
         
@@ -99,7 +92,10 @@ class ButtonDriver:
 ## -----------------------------------------------------------------------------------------------
 
 ## Water Sensor Driver Class
-## TODO: Impliment synchronous reading of the water sensor
+## The water sensor driver class is used to read the water sensor value (asynchronously)
+## The water sensor value is normalized to between 1 and 100
+## The water sensor value is averaged over 10 readings
+## The water sensor pin is wired to pin 34 (ADC2)
 class WaterSensorDriver:
     ## Normalization constants to between 1 and 100
     TARGET_MIN = 1
@@ -112,13 +108,15 @@ class WaterSensorDriver:
 
     def __init__(self, pin):
         self.SENSOR_PIN = machine.Pin(pin, machine.Pin.IN) ## Water Sensor Pin is Pin 34 or (ADC2)
+        
+        self.sensor_running = False
         self.moving_average_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     ## Function to normalize ADC value
     def _normalize_adc_value(self, raw_value):
         return self.TARGET_MIN + (raw_value / self.RAW_MAX) * 99
 
-    def read_sensor(self):
+    def read_moisture_sensor(self):
         raw_val = machine.ADC(self.SENSOR_PIN).read_u16()
         normalized_val = int(self._normalize_adc_value(raw_val)) # Normalize the raw value to between 1 and 100
 
@@ -131,12 +129,20 @@ class WaterSensorDriver:
 
         ## Return the average of the moving average list
         return sum(self.moving_average_list) / 10
+    
+    ## Function to read the sensor value asynchronously
+    async def m_sensor_run(self):
+        self.sensor_running = True
+        while (self.sensor_running):
+            moisture_val = self.read_moisture_sensor() # Already normalized and averaged
+            await uasyncio.sleep(0.1)
+            return moisture_val
         
 ## -----------------------------------------------------------------------------------------------
 
 ## Water Pump Motor Driver Class
+## The motor driver class is used to control the water pump motor
 ## In Rita V1, motor pin is wired to 15
-## TODO: Impliment motor duration method with async functionality
 class PumpMotorDriver:
     def __init__(self, pin):
         self.MOTOR_PIN = machine.Pin(pin, machine.Pin.OUT, machine.Pin.PULL_DOWN)
@@ -153,17 +159,16 @@ class PumpMotorDriver:
         else:
             self.MOTOR_PIN.value(1)
         
-    def motor_duration(self, t): ## Stays on for t seconds
+    async def motor_run_duration(self, t): ## Stays on for t seconds
         self.MOTOR_PIN.value(1)
-        utime.sleep(t)
+        await uasyncio.sleep(t)
         self.MOTOR_PIN.value(0)
 
 ## -----------------------------------------------------------------------------------------------
 
 ## LCD Driver Class
-## TODO: Impliment LCD Driver class - objective is to set up functions that facilitate menu functionality.
+## LCD Driver class - objective is to set up functions that facilitate menu functionality.
 ##  Below are some considerations for implimentation:
-##      - text too long for a single line
 ##      - Idle display screen functionality
 ##      - Backlight timeout (possibly to be part of the menu classes)
 ##      - Logo and/or custom character functionality (for some style)
@@ -226,8 +231,8 @@ class LcdDriver:
             ## Append the stat name and string converted value to the list
             stat_dict_list_strings.append({stat_name : stat_str}) 
 
+        self.lcd.clear()
         while True:
-            self.lcd_clear()
             self._lcd_display(  stat_dict_list_strings[0].keys()[0] + ":" + stat_dict_list_strings[0].values()[0] + "||" + stat_dict_list_strings[1].keys()[0] + ":" + stat_dict_list_strings[1].values()[0],
                                 stat_dict_list_strings[2].keys()[0] + ":" + stat_dict_list_strings[2].values()[0] + "||" + stat_dict_list_strings[3].keys()[0] + ":" + stat_dict_list_strings[3].values()[0])
             await uasyncio.sleep(0.5)
@@ -241,7 +246,6 @@ class LcdDriver:
     def _lcd_display(self, line1, line2):
         assert len(line1) <= self.num_cols, "Line 1 is too long"
         assert len(line2) <= self.num_cols, "Line 2 is too long"
-        self.lcd.clear()
         self.lcd.move_to(0, 0)
         self.lcd.putstr(line1)
         self.lcd.move_to(0, 1)
@@ -277,10 +281,11 @@ class LcdDriver:
 ## -----------------------------------------------------------------------------------------------
 
 ## LED Driver Class
-##  Considerations:
-##      - steady signal
-##      - fast blink
-##      - Slow blink (for error indication)
+##  States of the LED:
+##      - off (self.led_state = 0)
+##      - steady signal (self.led_state = 1)
+##      - fast blink (self.led_state = 2)
+##      - Slow blink  (self.led_state = 3)
 ## NOTE: In Rita V1, Blue is wired to pin 8 (GPIO2) and Red is wired to pin 9 (GPIO3)
 ## Blue and Red LEDs must be initialized seperately as seperate objects
 class LedDriver:
@@ -288,14 +293,10 @@ class LedDriver:
         self.led_state = 0 # 0 is off, 1 is on, 2 is blinking (fast), 3 is blinking (slow)
         self.led_running = False
         self.led = machine.Pin(led_pin, machine.Pin.OUT)
-        print("LedDriver initialized on pin: ", led_pin)
 
     ## led_run is a method that runs the LED in the current state
     async def led_run(self):
         self.led_running = True
-        print("Running LED: ", self.led)
-        print("LED State: ", self.led_state)
-        print("LED Running: ", self.led_running)
         while self.led_running:
             if self.led_state == 1:
                 self.led.value(1)  # LED steady ON
@@ -332,7 +333,7 @@ class LedDriver:
     
     ## _led_toggle is a private method that toggles the LED state
     def _led_toggle(self):
-        if (self.led.value() == 1): ## Note that it checks the actual state of the LED pin, not the stored state
+        if (self.led.value() == 1): ## Note: it checks the actual state of the LED pin, not the stored state
             self.led.value(0)
         else:
             self.led.value(1)
