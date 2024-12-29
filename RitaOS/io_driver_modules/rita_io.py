@@ -17,36 +17,56 @@ import uasyncio
 ## - LedDriver
 
 
-
-
+##  ManageIO initializes all of the seperate io driver classes and stores them as attributes of the class
 class ManageIO:
     """
     A class that handles the IO of the rita device. That is, the class manages
     the device's inputs (buttons and water sensor) and outputs (motor, LEDs, and LCD).
     """
 
+    def __init__(self, button1_pin, button2_pin, water_sensor_pin, lcd_addr, lcd_rows, lcd_cols, LED1_pin, LED2_pin, motor_pin):
+        """
+        Initializes the rita_io class with the following parameters:
+        button1_pin: The pin number of button1 (select button)
+        button2_pin: The pin number of button2 (Increment button)
+        water_sensor_pin: The pin number of the water sensor
+        lcd_addr: The I2C address of the LCD
+        lcd_rows: The number of rows of the LCD (this case 2)
+        lcd_cols: The number of columns of the LCD (this case 16)
+        LED1_pin: The pin number of LED1
+        LED2_pin: The pin number of LED2
+        motor_pin: The pin number of the motor
+        """
+
+        ## Initialize the IO pins
+        self.button1_pin = button1_pin
+        self.button2_pin = button2_pin
+        self.water_sensor_pin = water_sensor_pin
+        self.lcd_addr = lcd_addr
+        self.lcd_rows = lcd_rows
+        self.lcd_cols = lcd_cols
+        self.LED1_pin = LED1_pin
+        self.LED2_pin = LED2_pin
+        self.motor_pin = motor_pin
 
 
-    # ## NOTE the io manager initializes all of the seperate io driver classes and stores them as attributes of the class
-    # def __init__(self, button1_pin, button2_pin, water_sensor_pin, lcd_addr, lcd_rows, lcd_cols, LED1_pin, LED2_pin):
-    #     """
-    #     Initializes the rita_io class with the following parameters:
-    #     button1_pin: The pin number of button1 (select button)
-    #     button2_pin: The pin number of button2 (Increment button)
-    #     water_sensor_pin: The pin number of the water sensor
-    #     lcd_addr: The I2C address of the LCD
-    #     lcd_rows: The number of rows of the LCD (this case 2)
-    #     lcd_cols: The number of columns of the LCD (this case 16)
-    #     LED1_pin: The pin number of LED1
-    #     LED2_pin: The pin number of LED2
-    #     """
-    #     self.button1 = machine.Pin(button1_pin, machine.Pin.IN, machine.Pin.PULL_UP) ## Select Button
-    #     self.button2 = machine.Pin(button2_pin, machine.Pin.IN, machine.Pin.PULL_UP) ## Increment Button
-    #     self.water_sensor = machine.Pin(water_sensor_pin, machine.Pin.IN, machine.Pin.PULL_DOWN) 
-    #     self.i2c = I2C(0, sda=machine.Pin(0), scl=machine.Pin(1), freq=400000)
-    #     self.lcd = I2cLcd(self.i2c, lcd_addr, lcd_rows, lcd_cols)
-    #     self.LED1 = machine.Pin(LED1_pin, machine.Pin.OUT)
-    #     self.LED2 = machine.Pin(LED2_pin, machine.Pin.OUT)
+
+    ## manage_io_run is a method that runs the IO manager in an async loop of 2 seconds
+    async def manage_io_initialize(self):
+        self.lcd = LcdDriver(self.lcd_addr, self.lcd_rows, self.lcd_cols)
+        self.led1 = LedDriver(self.LED1_pin)
+        self.led2 = LedDriver(self.LED2_pin)
+        self.button1 = ButtonDriver(self.button1_pin)
+        self.button2 = ButtonDriver(self.button2_pin)
+        self.water_sensor = WaterSensorDriver(self.water_sensor_pin)
+        self.motor = PumpMotorDriver(self.motor_pin)
+
+        await uasyncio.gather(
+            self.lcd.lcd_inititalize(),
+            self.led1.led_initialize(),
+            self.led2.led_initialize(),
+        )
+
 
 
 ## -----------------------------------------------------------------------------------------------
@@ -178,14 +198,20 @@ class LcdDriver:
         self.num_cols = num_cols
         self.i2c = I2C(0, sda=machine.Pin(0), scl=machine.Pin(1), freq=400000)
         self.lcd = I2cLcd(self.i2c, addr, num_rows, num_cols)
+
+    ## lcd_initialize is a method that initializes the LCD asynchonously
+    async def lcd_inititalize(self):
+        await self.lcd_bl_wake(2)
         self.lcd.clear()
         self.lcd.move_to(0, 0) # column, row
-        self.lcd.putstr("RitaOS")
+        self.lcd.putstr("Rita")
+        ## TODO: Impliment a logo or custom character
         self.lcd.move_to(0, 1)  # column, row
         self.lcd.putstr("Initializing...")
-        utime.sleep(2)
+        await uasyncio.sleep(2)
         self.lcd.clear()
         self.lcd.hide_cursor()
+
 
     ## --- Async methods ---
 
@@ -293,6 +319,14 @@ class LedDriver:
         self.led_state = 0 # 0 is off, 1 is on, 2 is blinking (fast), 3 is blinking (slow)
         self.led_running = False
         self.led = machine.Pin(led_pin, machine.Pin.OUT)
+
+    ## led_initialize is a method that initializes the LED asynchronously
+    ## The LED is turned on for 2 seconds and then turned off
+    async def led_initialize(self):
+        self.led.value(1)
+        await uasyncio.sleep(2)
+        self.led.value(0)
+
 
     ## led_run is a method that runs the LED in the current state
     async def led_run(self):
