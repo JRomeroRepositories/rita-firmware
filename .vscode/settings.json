@@ -14,5 +14,8 @@
         "reportMissingModuleSource": "none"
     },
     "micropico.syncFolder": "",
-    "micropico.openOnStart": true
+    "micropico.openOnStart": true,
+    "files.associations": {
+        "freertos.h": "c"
+    }
 }

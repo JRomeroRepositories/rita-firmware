@@ -1,0 +1,14 @@
+# Target labels
+ picotoolBuild
+# Source files and their labels
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/picotoolBuild
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/picotoolBuild.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/picotoolBuild-complete.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule
+/Users/jromero/Documents/GitHub/Rita_The_Plant/build/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule
