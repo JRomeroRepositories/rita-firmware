@@ -1,5 +1,0 @@
-/Users/jromero/Documents/GitHub/Rita_The_Plant/build/_deps/picotool/picotool
-/Users/jromero/Documents/GitHub/Rita_The_Plant/build/_deps/picotool/picotoolTargets.cmake
-/Users/jromero/Documents/GitHub/Rita_The_Plant/build/_deps/picotool/picotoolTargets-release.cmake
-/Users/jromero/Documents/GitHub/Rita_The_Plant/build/_deps/picotool/picotoolConfig.cmake
-/Users/jromero/Documents/GitHub/Rita_The_Plant/build/_deps/picotool/picotoolConfigVersion.cmake

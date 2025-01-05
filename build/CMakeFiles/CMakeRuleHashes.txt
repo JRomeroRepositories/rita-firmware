@@ -1,7 +1,4 @@
 # Hashes of file build rules.
-f7239011e18eae3c480ecd13bdb2c667 CMakeFiles/picotoolBuild
-6e853da45b122d838228298e2048bb59 CMakeFiles/picotoolBuild-complete
-de7da4f4ced7da472aa38e0864ba0d95 CMakeFiles/picotoolForceReconfigure
 21de9271ff48fea885ace4e1f09b6592 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin
 d79ad8ded458f380c67baa6ecaba2966 pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
 81dd6f8de7d286cd806b194a3b170208 pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S
@@ -16,11 +13,3 @@ b1522298310b8583ab2f2d3b49581502 pico-sdk/src/rp2_common/pico_cyw43_driver/pioas
 5ae820b5dbadd74209f2189cc6d8c4b7 pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-mkdir
 d9ed561fb8a0b922ffac7cd9fca55aae pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-patch
 b4d2b897c5956d27b41d2e8ecae1f879 pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/pioasmBuild-update
-e8e39247178b6d58f552833bc7045f22 picotool/src/picotoolBuild-stamp/picotoolBuild-build
-c832bc81f38e1a6102825e4c496a889d picotool/src/picotoolBuild-stamp/picotoolBuild-configure
-69abae7853bcf60212582184eb82d124 picotool/src/picotoolBuild-stamp/picotoolBuild-download
-35e8c34cb64f8fe90ccfcc3242a74d39 picotool/src/picotoolBuild-stamp/picotoolBuild-install
-00fc3bc0d43eaceec6a7262b07d01a77 picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir
-cdb57b85c10a23b95ecf634f74ecaece picotool/src/picotoolBuild-stamp/picotoolBuild-patch
-f61f16627e1f56b2dc5deb5edb9459cd picotool/src/picotoolBuild-stamp/picotoolBuild-test
-5e1fe1b97256759dd368dd62c2eff164 picotool/src/picotoolBuild-stamp/picotoolBuild-update

@@ -859,10 +859,360 @@ CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c > CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c > CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c > CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c > CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_flash/flash.c
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_flash/flash.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_flash/flash.c > CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_flash/flash.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c > CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd_control.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/device/usbd_control.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/video/video_device.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/class/video/video_device.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/tusb.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/tusb.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/tusb.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/tusb.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c > CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c -o CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/RitaOS.dir/flags.make
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c > CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+
+CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s"
+	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i: cmake_force
@@ -876,7 +1226,7 @@ CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s: cmak
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.i: cmake_force
@@ -890,7 +1240,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/croutine.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/croutine.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.i: cmake_force
@@ -904,7 +1254,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.s: cmake_force
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/event_groups.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/event_groups.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.i: cmake_force
@@ -918,7 +1268,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/event_groups.c.s: cmake_force
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/list.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/list.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.i: cmake_force
@@ -932,7 +1282,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/list.c.s: cmake_force
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/queue.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/queue.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.i: cmake_force
@@ -946,7 +1296,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/queue.c.s: cmake_force
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/stream_buffer.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/stream_buffer.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.i: cmake_force
@@ -960,7 +1310,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/stream_buffer.c.s: cmake_force
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/tasks.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/tasks.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.i: cmake_force
@@ -974,7 +1324,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/tasks.c.s: cmake_force
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/timers.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/timers.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.i: cmake_force
@@ -988,7 +1338,7 @@ CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/timers.c.s: cmake_force
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_exception/exception.c
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o -MF CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o.d -o CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_exception/exception.c
 
 CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.i: cmake_force
@@ -1002,7 +1352,7 @@ CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.s: 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o: CMakeFiles/RitaOS.dir/flags.make
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o: /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o: CMakeFiles/RitaOS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o"
 	arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o -MF CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o.d -o CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o -c /Users/jromero/Documents/GitHub/Rita_The_Plant/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c
 
 CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.i: cmake_force
@@ -1072,6 +1422,31 @@ RitaOS_OBJECTS = \
 "CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o" \
 "CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" \
 "CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o" \
+"CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" \
 "CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o" \
 "CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o" \
 "CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o" \
@@ -1144,6 +1519,31 @@ RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/tusb.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 RitaOS: CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/ThirdParty/GCC/RP2040/port.c.o
 RitaOS: CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/croutine.c.o
@@ -1157,15 +1557,15 @@ RitaOS: CMakeFiles/RitaOS.dir/pico-sdk/src/rp2_common/hardware_exception/excepti
 RitaOS: CMakeFiles/RitaOS.dir/lib/FreeRTOS-Kernel/portable/MemMang/heap_4.c.o
 RitaOS: CMakeFiles/RitaOS.dir/build.make
 RitaOS: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-RitaOS: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
+RitaOS: /Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_crt0//memmap_default.ld
 RitaOS: CMakeFiles/RitaOS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking CXX executable RitaOS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Linking CXX executable RitaOS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RitaOS.dir/link.txt --verbose=$(VERBOSE)
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump -h /Users/jromero/Documents/GitHub/Rita_The_Plant/build/RitaOS > RitaOS.dis
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump -d /Users/jromero/Documents/GitHub/Rita_The_Plant/build/RitaOS >> RitaOS.dis
 	CMAKE_OBJCOPY-NOTFOUND -Oihex /Users/jromero/Documents/GitHub/Rita_The_Plant/build/RitaOS RitaOS.hex
 	CMAKE_OBJCOPY-NOTFOUND -Obinary /Users/jromero/Documents/GitHub/Rita_The_Plant/build/RitaOS RitaOS.bin
-	_deps/picotool/picotool uf2 convert --quiet /Users/jromero/Documents/GitHub/Rita_The_Plant/build/RitaOS RitaOS.uf2 --family rp2040
+	/opt/homebrew/bin/picotool uf2 convert --quiet /Users/jromero/Documents/GitHub/Rita_The_Plant/build/RitaOS RitaOS.uf2 --family rp2040
 
 # Rule to build all files generated by this target.
 CMakeFiles/RitaOS.dir/build: RitaOS

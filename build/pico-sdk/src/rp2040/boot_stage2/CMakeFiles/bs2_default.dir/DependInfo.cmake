@@ -30,7 +30,6 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/hardware_base/include"
   "/Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/common/pico_base_headers/include"
   "generated/pico_base"
-  "/Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/boards/include"
   "/Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2040/pico_platform/include"
   "/Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_platform_compiler/include"
   "/Users/jromero/Documents/GitHub/Rita_The_Plant/pico-sdk/src/rp2_common/pico_platform_panic/include"

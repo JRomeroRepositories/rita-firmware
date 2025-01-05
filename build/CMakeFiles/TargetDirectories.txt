@@ -1,6 +1,4 @@
 /Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/RitaOS.dir
-/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/picotoolForceReconfigure.dir
-/Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/picotoolBuild.dir
 /Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/edit_cache.dir
 /Users/jromero/Documents/GitHub/Rita_The_Plant/build/CMakeFiles/rebuild_cache.dir
 /Users/jromero/Documents/GitHub/Rita_The_Plant/build/FREERTOS_KERNEL/CMakeFiles/edit_cache.dir
