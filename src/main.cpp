@@ -1,9 +1,43 @@
 #include <Arduino.h>
-#include "Scheduler.h"
+#include <FreeRTOS.h>
+// #include "Scheduler.h"
+
+void read_from_analog_pin(int pin) {
+    int analog_pin = pin;
+    int analog_value = 0;
+    pinMode(analog_pin, INPUT);
+    while (true) {
+        analog_value = analogRead(analog_pin);
+        Serial.printf("Analog value: %d\n", analog_value);
+        delay(1000);
+    }
+}
+
 
 void setup() {
     // createTasks(); // Start FreeRTOS tasks
     // vTaskStartScheduler(); // Start the RTOS
+    int RED_LED_PIN = 3; // GPIO 3
+    int MOTOR_PIN = 22; // GPIO 22
+
+    pinMode(RED_LED_PIN, OUTPUT);
+    pinMode(MOTOR_PIN, OUTPUT);
+
+    digitalWrite(RED_LED_PIN, HIGH);
+    digitalWrite(MOTOR_PIN, HIGH);
+    delay(1000);
+    digitalWrite(RED_LED_PIN, LOW);
+    digitalWrite(MOTOR_PIN, LOW);
+    delay(1000);
+    digitalWrite(RED_LED_PIN, HIGH);
+    digitalWrite(MOTOR_PIN, HIGH);
+    delay(3000);
+    digitalWrite(RED_LED_PIN, LOW);
+    digitalWrite(MOTOR_PIN, LOW);
+
+    
+    read_from_analog_pin(28);
+
 }
 
 void loop() {
