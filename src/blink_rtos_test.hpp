@@ -1,47 +1,3 @@
-#include <Arduino.h>
-#include "led_driver.hpp"
-// #include "Scheduler.h"
-
-void setup() {
-    int RED_LED_PIN = 3; // GPIO3 which is pin 5 on the Pico
-
-    led_driver led;
-    led.init_led_out(RED_LED_PIN);
-    led.led_turn_on(RED_LED_PIN);
-    delay(1000);
-    led.led_turn_off(RED_LED_PIN);
-    delay(1000);
-    led.led_toggle(RED_LED_PIN);
-    delay(1000);
-    led.blink_led(RED_LED_PIN, 10, 500, 500);
-
-
-    
-}
-
-void loop() {
-    // Not used with FreeRTOS
-    
-}
-
-
-// // Demonstrates a simple use of the setup1()/loop1() functions
-// // for a multiprocessor run.
-
-// // Will output something like, where C0 is running on core 0 and
-// // C1 is on core 1, in parallel.
-
-// // 11:23:07.507 -> C0: Blue leader standing by...
-// // 11:23:07.507 -> C1: Red leader standing by...
-// // 11:23:07.507 -> C1: Stay on target...
-// // 11:23:08.008 -> C1: Stay on target...
-// // 11:23:08.505 -> C0: Blue leader standing by...
-// // 11:23:08.505 -> C1: Stay on target...
-// // 11:23:09.007 -> C1: Stay on target...
-// // 11:23:09.511 -> C0: Blue leader standing by...
-// // 11:23:09.511 -> C1: Stay on target...
-// // 11:23:10.015 -> C1: Stay on target...
-
 // #include <Arduino.h>
 // #include <FreeRTOS.h>
 // #include <task.h>
@@ -50,6 +6,8 @@ void loop() {
 
 
 // std::map<eTaskState, const char *> eTaskStateName { {eReady, "Ready"}, { eRunning, "Running" }, {eBlocked, "Blocked"}, {eSuspended, "Suspended"}, {eDeleted, "Deleted"} };
+
+// // ps is print status of a
 // void ps() {
 //   int tasks = uxTaskGetNumberOfTasks();
 //   TaskStatus_t *pxTaskStatusArray = new TaskStatus_t[tasks];
