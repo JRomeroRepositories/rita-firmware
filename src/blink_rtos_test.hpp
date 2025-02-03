@@ -1,68 +1,3 @@
-#include <Arduino.h>
-#include <FreeRTOS.h>
-// #include "Scheduler.h"
-
-void read_from_analog_pin(int pin) {
-    int analog_pin = pin;
-    int analog_value = 0;
-    pinMode(analog_pin, INPUT);
-    while (true) {
-        analog_value = analogRead(analog_pin);
-        Serial.printf("Analog value: %d\n", analog_value);
-        delay(1000);
-    }
-}
-
-
-void setup() {
-    // createTasks(); // Start FreeRTOS tasks
-    // vTaskStartScheduler(); // Start the RTOS
-    int RED_LED_PIN = 3; // GPIO 3
-    int MOTOR_PIN = 22; // GPIO 22
-
-    pinMode(RED_LED_PIN, OUTPUT);
-    pinMode(MOTOR_PIN, OUTPUT);
-
-    digitalWrite(RED_LED_PIN, HIGH);
-    digitalWrite(MOTOR_PIN, HIGH);
-    delay(1000);
-    digitalWrite(RED_LED_PIN, LOW);
-    digitalWrite(MOTOR_PIN, LOW);
-    delay(1000);
-    digitalWrite(RED_LED_PIN, HIGH);
-    digitalWrite(MOTOR_PIN, HIGH);
-    delay(3000);
-    digitalWrite(RED_LED_PIN, LOW);
-    digitalWrite(MOTOR_PIN, LOW);
-
-    
-    read_from_analog_pin(28);
-
-}
-
-void loop() {
-    // Not used with FreeRTOS
-    
-}
-
-
-// // Demonstrates a simple use of the setup1()/loop1() functions
-// // for a multiprocessor run.
-
-// // Will output something like, where C0 is running on core 0 and
-// // C1 is on core 1, in parallel.
-
-// // 11:23:07.507 -> C0: Blue leader standing by...
-// // 11:23:07.507 -> C1: Red leader standing by...
-// // 11:23:07.507 -> C1: Stay on target...
-// // 11:23:08.008 -> C1: Stay on target...
-// // 11:23:08.505 -> C0: Blue leader standing by...
-// // 11:23:08.505 -> C1: Stay on target...
-// // 11:23:09.007 -> C1: Stay on target...
-// // 11:23:09.511 -> C0: Blue leader standing by...
-// // 11:23:09.511 -> C1: Stay on target...
-// // 11:23:10.015 -> C1: Stay on target...
-
 // #include <Arduino.h>
 // #include <FreeRTOS.h>
 // #include <task.h>
@@ -71,6 +6,8 @@ void loop() {
 
 
 // std::map<eTaskState, const char *> eTaskStateName { {eReady, "Ready"}, { eRunning, "Running" }, {eBlocked, "Blocked"}, {eSuspended, "Suspended"}, {eDeleted, "Deleted"} };
+
+// // ps is print status of a
 // void ps() {
 //   int tasks = uxTaskGetNumberOfTasks();
 //   TaskStatus_t *pxTaskStatusArray = new TaskStatus_t[tasks];
