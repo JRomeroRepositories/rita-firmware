@@ -1,12 +1,10 @@
-// #include <Arduino.h>
+#include <Arduino.h>
+#include "sensor_driver.hpp"
 
-// void read_from_analog_pin(int pin) {
-//     int analog_pin = pin;
-//     int analog_value = 0;
-//     pinMode(analog_pin, INPUT);
-//     while (true) {
-//         analog_value = analogRead(analog_pin);
-//         Serial.printf("Analog value: %d\n", analog_value);
-//         delay(1000);
-//     }
-// }
+SensorDriver::SensorDriver(int pin) : SENSOR_PIN(pin) {
+  pinMode(SENSOR_PIN, INPUT);
+}
+
+int SensorDriver::sensor_read_val() {
+  return analogRead(SENSOR_PIN);
+}
