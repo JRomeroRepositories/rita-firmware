@@ -1,30 +1,30 @@
 #include <Arduino.h>
 #include "led_driver.hpp"
 
-
-void init_led_out(int pin) {
-    pinMode(pin, OUTPUT);
+// Constructor
+LedDriver::LedDriver(int pin) : LED_PIN(pin) {
+    pinMode(LED_PIN, OUTPUT);
 }
 
-void led_turn_on(int pin) {
-    digitalWrite(pin, HIGH);
+void LedDriver::led_turn_on() {
+    digitalWrite(LED_PIN, HIGH);
 }
 
-void led_turn_off(int pin) {
-    digitalWrite(pin, LOW);
+void LedDriver::led_turn_off() {
+    digitalWrite(LED_PIN, LOW);
 }
 
-void led_toggle(int pin) {
-    digitalWrite(pin, !digitalRead(pin));
+void LedDriver::led_toggle() {
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
 }
 
-void blink_led(int pin, int times, int on_time, int off_time) {
+void LedDriver::blink_led(int times, int on_time, int off_time) {
     for (int i = 0; i < times; i++) {
-        digitalWrite(pin, HIGH);
+        digitalWrite(LED_PIN, HIGH);
         delay(on_time);
-        digitalWrite(pin, LOW);
+        digitalWrite(LED_PIN, LOW);
         delay(off_time);
-    }
+    };
 }
 
 

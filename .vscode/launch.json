@@ -19,7 +19,7 @@
             "svdPath": "/Users/jromero/.platformio/platforms/raspberrypi@src-ff76a3915224135aafad379817f41edd/misc/svd/rp2040.svd",
             "preLaunchTask": {
                 "type": "PlatformIO",
-                "task": "Pre-Debug (rpipicow)"
+                "task": "Pre-Debug"
             }
         },
         {
