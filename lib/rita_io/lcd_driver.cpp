@@ -1,43 +1,33 @@
-// #include <Arduino.h>
-// #include <Wire.h>
-// #include <SerialUSB.h>
-// #include <LiquidCrystal_PCF8574.h>
+#include "lcd_driver.hpp"
+#include <Arduino.h>
+#include <Wire.h>
+#include <string>
+#include <LiquidCrystal_PCF8574.h>
 
 
-// class LcdDriver {
-//     public:
-//         void setup() {
-//             LiquidCrystal_PCF8574 lcd(0x27);  // set the LCD address to 0x27 for a 16 chars and 2 line display
-//             int error;
+LcdDriver::LcdDriver(int sda_pin, int scl_pin) : SDA_PIN(sda_pin), SCL_PIN(scl_pin) {
+  LiquidCrystal_PCF8574 lcd(0x27);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 
-//             Serial.begin(115200);
-//             Serial.println("LCD...");
+  // Manualy set I2C pins
+  Wire.setSDA(SDA_PIN);  // Set SDA to GP0
+  Wire.setSCL(SCL_PIN);  // Set SCL to GP1
 
-//             // wait on Serial to be available on Leonardo
-//             while (!Serial)
-//                 ;
+  // Initialize wire library
+  Wire.begin();
+  Wire.beginTransmission(0x27);
 
-//             Serial.println("Probing for PCF8574 on address 0x27...");
+  int error;
+  error = Wire.endTransmission();
+  Serial.print("Error: ");
+  Serial.print(error);
 
-//             // See http://playground.arduino.cc/Main/I2cScanner how to test for a I2C device.
-//             Wire.begin();
-//             Wire.beginTransmission(0x27);
-//             error = Wire.endTransmission();
-//             Serial.print("Error: ");
-//             Serial.print(error);
+  // Begin lcd on the initialized liquid crystal instance
+  lcd.begin(16, 2);
+  lcd.print("LCD INITIALIZED");
 
-//             if (error == 0) {
-//                 Serial.println(": LCD found.");
-//                 show = 0;
-//                 lcd.begin(16, 2);  // initialize the lcd
+}
 
-//                 lcd.createChar(1, dotOff);
-//                 lcd.createChar(2, dotOn);
+// void LcdDriver::lcd_write_line(int lin, std::string msg) {
+//     lcd.setBacklight(255);
 
-//             } else {
-//                 Serial.println(": LCD not found.");
-//             }  // if
-
-//             }  // setup()
-//         }
 // }
