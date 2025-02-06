@@ -2,11 +2,11 @@
 
 class LcdDriver {
   public:
-  LiquidCrystal_PCF8574 lcd;
-  LcdDriver(int sda_pin, int scl_pin);
+  LcdDriver();
+  
 
   private:
-    const int SDA_PIN;
-    const int SCL_PIN;
+    LiquidCrystal_PCF8574 lcd;
+
 
 };

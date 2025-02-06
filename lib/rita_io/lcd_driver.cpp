@@ -5,8 +5,9 @@
 #include <LiquidCrystal_PCF8574.h>
 
 
-LcdDriver::LcdDriver(int sda_pin, int scl_pin) : SDA_PIN(sda_pin), SCL_PIN(scl_pin) {
-  LiquidCrystal_PCF8574 lcd(0x27);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+LcdDriver::LcdDriver() : lcd(0x27) {   // Use member initializer list to initialize lcd for address 0x27
+  const int SDA_PIN = 0;
+  const int SCL_PIN = 1;
 
   // Manualy set I2C pins
   Wire.setSDA(SDA_PIN);  // Set SDA to GP0
@@ -16,15 +17,21 @@ LcdDriver::LcdDriver(int sda_pin, int scl_pin) : SDA_PIN(sda_pin), SCL_PIN(scl_p
   Wire.begin();
   Wire.beginTransmission(0x27);
 
-  int error;
-  error = Wire.endTransmission();
-  Serial.print("Error: ");
-  Serial.print(error);
+  // error check.
+  int error = Wire.endTransmission();
+  if (error == 0) {
+    Serial.println(": LCD found.");
+    lcd.begin(16, 2);  // initialize the lcd
+    lcd.setBacklight(255);
+    lcd.print("LCD INITIALIZED");
+    Serial.print("LCD Initialized");
+
+  } else {
+    Serial.println(": LCD not found.");
+  }  // if
+  
 
   // Begin lcd on the initialized liquid crystal instance
-  lcd.begin(16, 2);
-  lcd.print("LCD INITIALIZED");
-
 }
 
 // void LcdDriver::lcd_write_line(int lin, std::string msg) {

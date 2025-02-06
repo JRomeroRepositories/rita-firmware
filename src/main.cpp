@@ -18,12 +18,12 @@ void setup() {
     int RED_LED_PIN = 3; // GPIO 3
     int MOTOR_PIN = 22; // GPIO 22
     int SENSOR_PIN = 28; // GPIO28 and/or ADC2
-    int SDA_PIN = 0; // I2C0 SDA
-    int SCL_PIN = 1; // I2C0 SCL
+    // int SDA_PIN = 0; // I2C0 SDA
+    // int SCL_PIN = 1; // I2C0 SCL
 
     LedDriver red_led(RED_LED_PIN);
     MotorDriver motor(MOTOR_PIN);
-    LcdDriver lcd(SDA_PIN, MOTOR_PIN);
+    LcdDriver lcd;
 
 
     Serial.begin(115200);
@@ -50,9 +50,7 @@ void setup() {
     Serial.printf("LCD Test\n");
 
 
-
-
-
+    Serial.printf("sensor_test\n");    
     SensorDriver m_sensor(28);
     while (1) {
         int moisture;
