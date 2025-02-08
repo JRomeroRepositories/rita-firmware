@@ -10,6 +10,7 @@
             "includePath": [
                 "/Users/jromero/Documents/GitHub/rita-firmware/include",
                 "/Users/jromero/Documents/GitHub/rita-firmware/src",
+                "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FreeRTOS/src",
                 "/Users/jromero/Documents/GitHub/rita-firmware/lib/rita_io",
                 "/Users/jromero/Documents/GitHub/rita-firmware/.pio/libdeps/rpipicow/LiquidCrystal_PCF8574/src",
                 "/Users/jromero/Documents/GitHub/rita-firmware/.pio/libdeps/rpipicow/PCF8574 library",
@@ -110,7 +111,6 @@
                 "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/ESPHost/src",
                 "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FatFS/src",
                 "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FatFSUSB/src",
-                "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FreeRTOS/src",
                 "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/HID_Bluetooth/src",
                 "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/HID_Joystick/src",
                 "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/HID_Keyboard/src",
@@ -170,6 +170,7 @@
                 "path": [
                     "/Users/jromero/Documents/GitHub/rita-firmware/include",
                     "/Users/jromero/Documents/GitHub/rita-firmware/src",
+                    "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FreeRTOS/src",
                     "/Users/jromero/Documents/GitHub/rita-firmware/lib/rita_io",
                     "/Users/jromero/Documents/GitHub/rita-firmware/.pio/libdeps/rpipicow/LiquidCrystal_PCF8574/src",
                     "/Users/jromero/Documents/GitHub/rita-firmware/.pio/libdeps/rpipicow/PCF8574 library",
@@ -270,7 +271,6 @@
                     "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/ESPHost/src",
                     "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FatFS/src",
                     "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FatFSUSB/src",
-                    "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/FreeRTOS/src",
                     "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/HID_Bluetooth/src",
                     "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/HID_Joystick/src",
                     "/Users/jromero/.platformio/packages/framework-arduinopico/libraries/HID_Keyboard/src",

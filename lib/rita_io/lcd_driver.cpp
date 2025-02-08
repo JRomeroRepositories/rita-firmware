@@ -6,10 +6,10 @@
 #include <LiquidCrystal_PCF8574.h>
 
 // // Custom Characters
-const byte DOT_OFF[] = { 0b00000, 0b01110, 0b10001, 0b10001,
-                  0b10001, 0b01110, 0b00000, 0b00000 };
-const byte DOT_ON[]; = { 0b00000, 0b01110, 0b11111, 0b11111,
-                0b11111, 0b01110, 0b00000, 0b00000 };
+// const byte DOT_OFF[] = { 0b00000, 0b01110, 0b10001, 0b10001,
+//                   0b10001, 0b01110, 0b00000, 0b00000 };
+// const byte DOT_ON[]; = { 0b00000, 0b01110, 0b11111, 0b11111,
+//                 0b11111, 0b01110, 0b00000, 0b00000 };
 
 // const btye
 

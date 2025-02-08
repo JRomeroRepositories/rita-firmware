@@ -22,9 +22,9 @@ void RitaUi::get_screen_state(std::string &lin_1, std::string &lin_2) {
   lin_2 = active_lin_2;
 }
 
-void RitaUi::menu_view() {
+// void RitaUi::menu_view() {
 
-}
+// }
 
 // whatever updates the ui state should use a mutex resource
 
