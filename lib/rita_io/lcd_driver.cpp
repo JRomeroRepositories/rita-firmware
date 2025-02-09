@@ -59,3 +59,92 @@ void LcdDriver::lcd_run(std::string lin_1, std::string lin_2) {
 }
 
 
+// // void loop() {
+// //   Serial.println("LCD loop...");
+// //   Serial.printf("starting main loop\n");
+// //   // int RED_LED_PIN = 3; // GPIO 3
+// //   // LedDriver red_led(RED_LED_PIN);
+// //   red_led.led_toggle();
+
+// //   if (show == 0) {
+// //     lcd.setBacklight(255);
+// //     lcd.home();
+// //     lcd.clear();
+// //     lcd.print("Hello LCD");
+// //     Serial.println("Hello LCD");
+// //     delay(1000);
+
+// //     lcd.setBacklight(0);
+// //     delay(1000);
+// //     lcd.setBacklight(255);
+
+// //   } else if (show == 1) {
+// //     lcd.clear();
+// //     lcd.print("[Cursor On]");
+// //     Serial.println("Cursor On");
+// //     lcd.cursor();
+
+// //   } else if (show == 2) {
+// //     lcd.clear();
+// //     lcd.print("Cursor Blink");
+// //     Serial.println("Cursor Blink");
+// //     lcd.blink();
+
+// //   } else if (show == 3) {
+// //     lcd.clear();
+// //     lcd.print("Cursor OFF");
+// //     Serial.println("Cursor OFF");
+// //     lcd.noBlink();
+// //     lcd.noCursor();
+
+// //   } else if (show == 4) {
+// //     lcd.clear();
+// //     lcd.print("[Display Off]");
+// //     Serial.println("Display Off");
+// //     lcd.noDisplay();
+
+// //   } else if (show == 5) {
+// //     lcd.clear();
+// //     lcd.print("Display On");
+// //     Serial.println("Display On");
+// //     lcd.display();
+
+// //   } else if (show == 7) {
+// //     lcd.clear();
+// //     lcd.setCursor(0, 0);
+// //     lcd.print("*** first line.");
+// //     Serial.println("first line");
+// //     lcd.setCursor(0, 1);
+// //     lcd.print("*** second line.");
+// //     Serial.println("second line");
+
+// //   } else if (show == 8) {
+// //     lcd.scrollDisplayLeft();
+// //   } else if (show == 9) {
+// //     lcd.scrollDisplayLeft();
+// //   } else if (show == 10) {
+// //     lcd.scrollDisplayLeft();
+// //   } else if (show == 11) {
+// //     lcd.scrollDisplayRight();
+
+// //   } else if (show == 12) {
+// //     lcd.clear();
+// //     lcd.print("write-");
+
+// //   } else if (show == 13) {
+// //     lcd.clear();
+// //     lcd.print("custom 1:<\01>");
+// //     Serial.println("custom 1");
+// //     lcd.setCursor(0, 1);
+// //     lcd.print("custom 2:<\02>");
+// //     Serial.println("custom 2");
+
+// //   } else {
+// //     lcd.print(show - 13);
+// //   }  // if
+
+// //   delay(1400);
+// //   show = (show + 1) % 16;
+// // }  // loop()
+
+
