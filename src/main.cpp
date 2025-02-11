@@ -3,16 +3,17 @@
 #include <LiquidCrystal_PCF8574.h>
 
 #include <FreeRTOS.h>
-#include "Scheduler.h"
+// #include "Scheduler.h"
 
 #include "led_driver.hpp"
 #include "motor_driver.hpp"
 #include "sensor_driver.hpp"
 #include "lcd_driver.hpp"
+#include "buttons_driver.hpp"
 
-void button_interrupt() {
-    Serial.println("Button Pressed");
-}
+// void button_interrupt() {
+//     Serial.println("Button Pressed");
+// }
 
 void setup() {
     // createTasks(); // Start FreeRTOS tasks
@@ -22,10 +23,13 @@ void setup() {
     int SENSOR_PIN = 28; // GPIO28 and/or ADC2
     int SDA_PIN = 0; // I2C0 SDA
     int SCL_PIN = 1; // I2C0 SCL
+    int INC_BTTN_PIN = 6; // GPIO 6
+    int SEL_BTTN_PIN = 7; // GPIO 7
 
     LedDriver red_led(RED_LED_PIN);
     MotorDriver motor(MOTOR_PIN);
     LcdDriver lcd;
+    ButtonDriver inc_bttn(INC_BTTN_PIN);
 
 
     Serial.begin(115200);
@@ -49,8 +53,9 @@ void setup() {
 
     Serial.printf("Initializing button interrupts\n");
     // void button_interrupt();
-    pinMode(6, INPUT_PULLUP);
-    attachInterrupt(digitalPinToInterrupt(6), button_interrupt, LOW);
+    // pinMode(6, INPUT_PULLUP);
+    // attachInterrupt(digitalPinToInterrupt(6), button_interrupt, LOW);
+    // Note button interrupt should be fully set up at initialization.
 
     // Serial.printf("sensor_test\n");    
     // SensorDriver m_sensor(28);
